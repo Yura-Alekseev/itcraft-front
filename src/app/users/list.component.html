@@ -1,0 +1,21 @@
+﻿<h1>Users</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width: 50%">Username</th>
+            <th style="width: 50%">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+        </tr>
+        <tr *ngIf="!users">
+            <td colspan="4" class="text-center">
+                <span class="spinner-border spinner-border-lg align-center"></span>
+            </td>
+        </tr>
+    </tbody>
+</table>
